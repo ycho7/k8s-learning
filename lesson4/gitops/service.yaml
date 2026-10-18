@@ -1,0 +1,18 @@
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: web-demo-service
+  namespace: web-demo
+  labels:
+    app.kubernetes.io/name: web-demo
+    app.kubernetes.io/component: web
+spec:
+  type: ClusterIP
+  selector:
+    app.kubernetes.io/name: web-demo
+  ports:
+    - name: http
+      port: 80
+      targetPort: http
+      protocol: TCP
