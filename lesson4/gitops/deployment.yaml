@@ -3,7 +3,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: web-demo-deployment
-  namespace: web-demo
+  namespace: gitops-demo
   labels:
     app.kubernetes.io/name: web-demo
     app.kubernetes.io/component: web
